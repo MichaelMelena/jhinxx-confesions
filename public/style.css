@@ -1,0 +1,151 @@
+
+:root{
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Oxanium', sans-serif;
+    color: white;
+    background-color: #222;
+    --primary-color: #00eaff;
+    --secondary-color: #1a1a1a;
+    font-weight: 200;
+}
+
+
+.dflex{
+    display: flex;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pager{
+  
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 80%;
+    background-image: url("arrowicon.png");
+    border-radius: 3rem;
+    background-color: var(--primary-color);
+    
+}
+.pager:hover{
+    background-color: #bbeaff;
+    -moz-box-shadow: 0px 0px 0.35rem 0.1rem var(--primary-color);
+-webkit-box-shadow: 0px 0px 0.35rem 0.1rem var(--primary-color);
+box-shadow: 0px 0px 0.35rem 0.1rem var(--primary-color);
+}
+#next{
+    transform: rotate(180deg);
+}
+
+.card{
+    position: relative;
+    gap: 0.6rem;
+    width: 25rem;
+    height: 15rem;
+    border: 0.1rem solid var(--primary-color) ;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+
+#currentPage, #lastPage {
+
+    display: inline-block;
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+#lastPage{
+    width: 2rem;
+
+}
+input[type="text"]{
+    height: 1.2rem;
+    width: 2rem;
+    /* text-align: right !important; */
+    padding: 0;
+    /* margin-right: 0.5rem; */
+    border-radius: 0.05rem;
+    padding-inline: 0;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Oxanium', sans-serif;
+}
+
+input[type="text"]:focus-visible{
+    outline: var(--primary-color) solid 1px;
+
+}
+
+#overlay{
+    position: absolute;
+    width: 29rem;
+    height: 19rem;
+    top: 0;
+    background-image: url("loadingdata.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: normal;
+    display: none;
+}
+
+.loading-active{
+ display:  block !important;
+}
+.card-body{
+    flex-grow: 1;
+    width: 100%;
+}
+#content{
+    display: block;
+    height: 14rem;
+    overflow-y: auto;
+    font-size: 1.5rem;
+}
+#logo{
+    position: absolute;
+    mix-blend-mode: screen;
+    background-image: url("jhinxxlogo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15rem;
+    height: 15rem;
+    opacity: 0.1;
+    left: 6.5rem;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 4px;;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #eee;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
