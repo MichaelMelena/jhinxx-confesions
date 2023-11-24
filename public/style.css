@@ -115,6 +115,10 @@ input[type="text"]:focus-visible{
     display: block;
     height: 14rem;
     overflow-y: auto;
+    overflow-x: hidden;
+    text-wrap: pretty;
+    word-wrap: normal;
+    overflow-wrap: break-word;
     font-size: 1.5rem;
 }
 #logo{
